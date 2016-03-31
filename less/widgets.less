@@ -38,6 +38,7 @@
 //  #Click to Call
 //  #Images
 //  #Divider (Keyline)
+//  #Homepage Image Widgets
 
 
 @import "@{templateLocal}/less/widgets/widget-spacing.less";
@@ -297,4 +298,36 @@
 hr.rule {
     height: 3px;
     background-color: darken(@color__body--background, 5%);
+}
+
+
+// -----------------------------
+// #Homepage Image Widgets
+// -----------------------------
+
+.homepage-images {
+
+    .flex-display;
+    .justify-content(center);
+    .flex-wrap(wrap);
+    .justify-content(space-between);
+    .align-items(stretch);
+    .align-content(space-between);
+
+    .widget {
+        -webkit-flex: 1 1 32%;
+        -ms-flex: 1 1 32%;
+        flex: 1 1 32%;
+        .imagewidget__figure {
+            margin: 10px 5px 0;
+            @media @mobile {
+                margin: 20px 0 0;
+            }
+        }
+        @media @mobile {
+            -webkit-flex: 1 1 100%;
+            -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+        }
+    }
 }

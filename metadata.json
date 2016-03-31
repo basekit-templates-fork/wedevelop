@@ -25,8 +25,8 @@
         "Swatch 1": {
             "color1":"#ffffff",
             "color2":"#3562AD",
-            "color3":"#333333",
-            "color4":"#565553",
+            "color3":"#485354",
+            "color4":"#485354",
             "color5":"#727475",
             "color6":"#C2B9AE",
             "color7":"#ADB1B5"
@@ -222,7 +222,7 @@
             "font__feature-strapline--letter-spacing" : "@font-swatch9-letter-spacing",
             "color__feature-strapline--text" : "@font-swatch9-color",
             "color__feature-button--text" : "@color__body--background",
-            "color__feature-button--border" : "fade(@color__body--background, 50%)",
+            "color__feature-button--border" : "@color__body--background",
             "color__feature-button--background": "transparent"
         },
         "blog": {
