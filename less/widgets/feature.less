@@ -1,0 +1,177 @@
+// ----------------------------------------
+// Feature
+// ----------------------------------------
+
+
+
+
+// Hero
+// ------------------------------
+
+.hero {
+    @media @mobile {
+        .flex-display;
+        .flex-direction(column);
+    }
+
+    [data-widget-type="feature"] {
+        .flex-order(2);
+    }
+}
+
+
+.feature {
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+
+
+// Background Image
+// ------------------------------
+
+
+.feature__background-image {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @media @tablet {
+        background-attachment: inherit;
+        background-position-y: 0!important;
+        min-height: 400px;
+    }
+
+    @media @mobile {
+        min-height: 150px;
+    }
+}
+
+
+
+
+// Content Wrap
+// ------------------------------
+
+.feature__content-wrap {
+    width: 100%;
+    z-index: 2;
+    display: table;
+
+    padding: 30px;
+    // overflow: auto;
+    background-color: fade(@color__feature-content--background, 60%);
+    overflow: hidden;
+
+}
+
+.feature,
+.feature__content-wrap {
+    min-height: @value__feature--height--desktop;
+    @media @tablet {
+        min-height: @value__feature--height--tablet;
+    }
+    @media @mobile {
+        min-height: @value__feature--height--mobile;
+    }
+}
+
+
+.feature__content-inner-wrap {
+    display: table-cell;
+    z-index: 3;
+    width: 100%;
+    margin: 0 auto;
+    vertical-align: middle;
+    text-align: center;
+
+    @media @tablet {
+        opacity: 1!important;
+        -webkit-transform: translateY(0)!important;
+    }
+}
+
+.feature__headline,
+.feature__strapline {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+
+// Headline
+// ------------------------------
+
+
+.feature__headline {
+    color: @color__feature-headline--text;
+
+    @media @bp-global-medium {
+        font-size: bkscale(@font__feature-headline--font-size, 0.8);
+        line-height: bkscale(@font__feature-headline--line-height, 0.8);
+    }
+    @media @tablet {
+        font-size: bkscale(@font__feature-headline--font-size, 0.7);
+        line-height: bkscale(@font__feature-headline--line-height, 0.7);
+    }
+    @media @mobile {
+        font-size: bkscale(@font__feature-headline--font-size, 0.5);
+        line-height: bkscale(@font__feature-headline--line-height, 0.5);
+    }
+
+}
+
+
+
+
+// Strapline
+// ------------------------------
+
+
+.feature__strapline {
+    color: @color__feature-strapline--text;
+
+    @media @tablet {
+        font-size: bkscale(@font__feature-strapline--font-size, 0.9);
+        line-height: bkscale(@font__feature-strapline--line-height, 0.9);
+    }
+    @media @mobile {
+        font-size: bkscale(@font__feature-strapline--font-size, 0.8);
+        line-height: bkscale(@font__feature-strapline--line-height, 0.8);
+    }
+}
+
+
+
+
+// Button
+// ------------------------------
+
+
+.feature__button {
+    margin: 20px 0 0;
+    color: @color__feature-button--text;
+    background-color: @color__feature-button--background;
+
+    @media @bp-global-medium, @bp-global-small {
+        margin-top: 10px;
+    }
+    @media @tablet {
+        font-size: bkscale(@font__button--font-size, 0.9);
+        line-height: bkscale(@font__button--line-height, 0.9);
+    }
+    @media @mobile {
+        font-size: bkscale(@font__button--font-size, 0.8);
+        line-height: bkscale(@font__button--line-height, 0.8);
+    }
+
+    &:hover {
+        background-color: @color__feature-button--background--hover;
+    }
+}
+
+
+
+
+

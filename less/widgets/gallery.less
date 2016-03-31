@@ -1,0 +1,193 @@
+// ----------------------------------------------
+// Gallery
+// ----------------------------------------------
+
+// Gallery List
+.gallery-list {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+// Gallery Item
+.gallery__gallery-item {
+    position: relative;
+    width: 32%;
+    margin-bottom: 20px;
+    // Display 100% at mobile
+    @media @mobile {
+        width: 100%;
+    }
+}
+
+
+// Gallery Images
+// Use Background-image Method
+.gallery__image-link {
+    display: block!important;
+    height: 280px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    @media @tablet {
+        height: 210px;
+    }
+}
+
+.gallery__caption {
+    display: block;
+    position: absolute;
+    top: inherit;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 20px;
+    opacity: 0;
+    margin-bottom: -100%;
+    overflow: hidden;
+    border: none;
+    background-color: hsla(hue(@color__body--background),
+                           saturation(@color__body--background),
+                           lightness(@color__body--background), 0.8);
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    .caption-link:hover {
+        text-decoration: none;
+    }
+    .image-title {
+        color: @color__h3--text;
+        font-family:@font__h3--font-family;
+        font-size: 20px;
+        font-weight: @font__h3--font-weight;
+        line-height: 30px;
+        letter-spacing: @font__h3--letter-spacing;
+    }
+    .image-description {
+        color: @color__p--text;
+        font-family: @font__p--font-family;
+        font-size: 16px;
+        font-weight: @font__p--font-weight;
+        line-height: 28px;
+        letter-spacing: @font__p--letter-spacing;
+    }
+    .image-title,
+    .image-description {
+        &:hover {
+            color: @color__secondary;
+        }
+    }
+    @media @tablet {
+        padding: 10px;
+        .image-title,
+        .image-description {
+            font-size: bkscale(@font__p--font-size, .9);
+            line-height: bkscale(@font__p--line-height, .9);
+        }
+    }
+}
+
+// Hide Img Element
+.gallery__image { display: none; }
+
+// Show Caption
+.gallery__figure:hover .gallery__caption {
+    opacity: 1;
+    margin-bottom: 0;
+    a:hover {
+        text-decoration: none;
+        .image-title,
+        .image-description {
+            color: @color__secondary;
+        }
+    }
+}
+
+.gallery__figure {
+    overflow: hidden;
+    position: relative;
+}
+
+// Gallery Images in Responsive Columns
+
+// Two Columns
+.columns-two-left,
+.columns-two-right {
+    .gallery__image-link {
+        height: 150px;
+        @media @tablet {
+            height: 107px;
+        }
+        @media @mobile {
+            height: 200px;
+        }
+    }
+    .gallery__caption {
+        padding: 10px;
+        // hide description on desktop
+        @media only screen and (min-width: 768px) {
+            .image-description {
+                display: none;
+            }
+        }
+    }
+    // hide caption on tablet only
+    @media only screen and (max-width : 768px) and (min-width : 480px) {
+        .gallery__figure:hover .gallery__caption {
+            display: none;
+        }
+    }
+}
+// Three Columns
+.columns-three-left,
+.columns-three-middle,
+.columns-three-right {
+    .gallery__image-link {
+        height: 95px;
+        @media @tablet {
+            height: 69px;
+        }
+        @media @mobile {
+            height: 200px;
+        }
+    }
+    // hide caption on desktop and tablet
+    @media only screen and (min-width: 480px) {
+        .gallery__figure:hover .gallery__caption {
+            display: none;
+        }
+    }
+}
+// Four Columns
+.columns-four-first,
+.columns-four-second,
+.columns-four-third,
+.columns-four-fourth {
+    .gallery__image-link {
+        height: 69px;
+        @media @tablet {
+            height: 107px;
+        }
+        @media @mobile {
+            height: 200px;
+        }
+    }
+    // hide caption on desktop and tablet
+    @media only screen and (min-width: 480px) {
+        .gallery__figure:hover .gallery__caption {
+            display: none;
+        }
+    }
+}
