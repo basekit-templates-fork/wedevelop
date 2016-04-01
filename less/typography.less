@@ -240,57 +240,42 @@ a {
 	// ------------------------------
 
 
-	.content blockquote,
-	.post-body blockquote {
+	blockquote {
 	    position: relative;
 	    quotes: "“" "”" "“" "”";
 	    width: 100%;
 	    margin: 0 auto;
+	    padding: 40px 60px;
 	    text-align: left;
 	    border: 1px solid darken(@color__feature-content--background,3%);
 	    background-color: @color__feature-content--background;
 	    .border-radius(3px);
-	    color: @color__h4--text;
+	    color: #ffffff;
 	    font-family: @font__p--font-family;
-	    font-size: @font__p--font-size;
-	    font-weight: @font__p--font-weight;
-	    line-height: @font__p--line-height;
-	    letter-spacing: @font__p--letter-spacing;
+	    font-size: @font__h4--font-size;
+		line-height: @font__h4--line-height;
 	    p, h1, h2, h3, h4 {
-	        color: @color__h4--text;
+	        color: #ffffff;
 	        font-family: @font__p--font-family;
-	        font-size: @font__p--font-size;
-	        font-weight: @font__p--font-weight;
-	        line-height: @font__p--line-height;
-	        letter-spacing: @font__p--letter-spacing;
-	        padding: 40px 60px;
-	        border: 1px solid darken(@color__feature-content--background,3%);
-	    	background-color: @color__feature-content--background;
+	        font-size: @font__h4--font-size;
+			line-height: @font__h4--line-height;
+	    	padding: 0;
 	    }
 	}
 
-	.content blockquote:before,
-	.post-body blockquote:before,
-	.content blockquote p:before,
-	.post-body blockquote p:before {
+	blockquote:before {
 	    position: absolute;
-	    color: @color-swatch4;
+	    color: #ffffff;
 	    font-size: 40px;
 	    left: 40px;
 	}
 
 	// Mobile
 	@media @mobile {
-	    .content blockquote,
-	    .post-body blockquote {
-	    	p, h1, h2, h3, h4 {
-	        	padding: 30px 30px 30px 50px;
-	        }
+	    blockquote {
+	    	padding: 30px 50px;
 	    }
-	    .content blockquote:before,
-	    .post-body blockquote:before,
-	    .content blockquote p:before,
-		.post-body blockquote p:before {
+	    blockquote:before {
 	        left: 25px;
 	    }
 	}
@@ -300,16 +285,10 @@ a {
 	.columns-four-second,
 	.columns-four-third,
 	.columns-four-fourth {
-	    .content blockquote,
-	    .post-body blockquote {
-	    	p, h1, h2, h3, h4 {
-	        	padding: 30px 30px 30px 50px;
-	        }
+	    blockquote {
+	    	padding: 30px 50px;
 	    }
-	    .content blockquote:before,
-	    .post-body blockquote:before,
-	    .content blockquote p:before,
-		.post-body blockquote p:before {
+	    blockquote p:before {
 	        left: 25px;
 	    }
 	}
