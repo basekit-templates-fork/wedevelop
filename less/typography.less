@@ -236,66 +236,6 @@ a {
 
 
 
-	// Block Quote
-	// ------------------------------
-
-
-	blockquote {
-	    position: relative;
-	    quotes: "“" "”" "“" "”";
-	    width: 100%;
-	    margin: 0 auto;
-	    padding: 40px 60px;
-	    text-align: left;
-	    border: 1px solid darken(@color__feature-content--background,3%);
-	    background-color: @color__feature-content--background;
-	    .border-radius(3px);
-	    color: #ffffff;
-	    font-family: @font__p--font-family;
-	    font-size: @font__h4--font-size;
-		line-height: @font__h4--line-height;
-	    p, h1, h2, h3, h4 {
-	        color: #ffffff;
-	        font-family: @font__p--font-family;
-	        font-size: @font__h4--font-size;
-			line-height: @font__h4--line-height;
-	    	padding: 0;
-	    }
-	}
-
-	blockquote:before {
-	    position: absolute;
-	    color: #ffffff;
-	    font-size: 40px;
-	    left: 35px;
-	}
-
-	// Mobile
-	@media @mobile {
-	    blockquote {
-	    	padding: 30px 50px;
-	    }
-	    blockquote:before {
-	        left: 25px;
-	    }
-	}
-
-	// Four Columns
-	.columns-four-first,
-	.columns-four-second,
-	.columns-four-third,
-	.columns-four-fourth {
-	    blockquote {
-	    	padding: 30px 50px;
-	    }
-	    blockquote p:before {
-	        left: 25px;
-	    }
-	}
-
-
-
-
 	// Pre
 	// ------------------------------
 
@@ -384,7 +324,62 @@ a {
 	}
 }
 
+// Block Quote
+// ------------------------------
 
+
+blockquote {
+    position: relative;
+    quotes: "“" "”" "“" "”";
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 60px;
+    text-align: left;
+    border: 1px solid darken(@color__feature-content--background,3%);
+    background-color: @color__feature-content--background;
+    .border-radius(3px);
+    color: #ffffff;
+    font-family: @font__p--font-family;
+    font-size: @font__h4--font-size;
+	line-height: @font__h4--line-height;
+    p, h1, h2, h3, h4 {
+        color: #ffffff;
+        font-family: @font__p--font-family;
+        font-size: @font__h4--font-size;
+		line-height: @font__h4--line-height;
+    	padding: 0;
+    }
+}
+
+blockquote:before {
+    position: absolute;
+    color: #ffffff;
+    font-size: 40px;
+    left: 35px;
+}
+
+// Mobile
+@media @mobile {
+    blockquote {
+    	padding: 30px 50px;
+    }
+    blockquote:before {
+        left: 25px;
+    }
+}
+
+// Four Columns
+.columns-four-first,
+.columns-four-second,
+.columns-four-third,
+.columns-four-fourth {
+    blockquote {
+    	padding: 30px 50px;
+    }
+    blockquote p:before {
+        left: 25px;
+    }
+}
 
 
 
