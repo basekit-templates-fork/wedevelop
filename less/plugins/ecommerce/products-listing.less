@@ -35,12 +35,18 @@
     -webkit-align-content: flex-start;
     -ms-flex-line-pack: start;
     align-content: flex-start;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
+    -webkit-align-items: flex-end;
+    -ms-flex-align: flex-end;
+    align-items: flex-end;
+
+    margin-top: 30px;
 
     @media (max-width: 1024px) {
         display: block;
+    }
+
+    @media @mobile {
+        margin-top: 20px;
     }
 
     // Fieldset Search
@@ -54,9 +60,6 @@
             padding: 0 0 20px 0;
         }
 
-        @media @bp-global-small {
-            padding: 14px 20px;
-        }
     }
 }
 
