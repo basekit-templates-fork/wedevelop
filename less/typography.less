@@ -376,9 +376,10 @@ blockquote:before {
 .columns-four-third,
 .columns-four-fourth {
     blockquote {
-    	padding: 30px 50px;
+    	padding: 30px 40px;
     }
-    blockquote p:before {
+    blockquote:before {
+    	content: '';
         left: 25px;
     }
 }
@@ -403,26 +404,6 @@ blockquote:before {
 
 		.content blockquote {
 			width: 100%;
-		}
-
-
-		// 4 columns
-		// ------------------------------
-
-
-		.columns-four-first,
-		.columns-four-second,
-		.columns-four-third,
-		.columns-four-fourth {
-
-			// Blockquote
-
-			.content blockquote {
-				padding-right: 0;
-				&:after {
-					display: none;
-				}
-			}
 		}
 	}
 }
