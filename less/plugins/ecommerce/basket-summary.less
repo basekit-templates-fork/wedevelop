@@ -248,7 +248,10 @@
         height: 30px;
         line-height: 30px;
         text-align: center;
-        background-color: darken(@color__button--background, 5%);
+        background-color: @color__button--background;
+        &:hover {
+            background-color: @color__button--background--hover;
+        }
     }
 
     // Quantity Field
@@ -290,8 +293,11 @@
     }
 
     .button--submit {
-        background-color: @color__primary;
-        color: @color__body--background;
+        background-color: @color__button--background;
+        color: @color__button--text;
+        &:hover {
+            background-color: @color__button--background--hover;
+        }
     }
 }
 

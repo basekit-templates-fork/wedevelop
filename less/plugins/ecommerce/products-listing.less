@@ -83,10 +83,10 @@
 
     @media (max-width: 1024px) {
         width: 100%;
-        padding: 10px 40px;
+        padding: 10px 0;
     }
     @media @bp-global-small {
-        padding: 10px 20px;
+        padding: 10px 0;
     }
 }
 
@@ -181,6 +181,7 @@
     // Select Wrap
 
     .select-wrap {
+        max-width: inherit;
         background-color: transparent;
         border: 1px solid fade(@color-swatch5, 30%);
         @media @bp-global-medium {
@@ -189,6 +190,12 @@
         @media @mobile {
             .select.small;
         }
+        &:after {
+            margin-right: 5px;
+        }
+    }
+    .select {
+        padding: 0 25px 0 10px;
     }
 }
 
@@ -313,8 +320,6 @@
     }
 
     .input {
-        padding-left: 14px;
-        box-shadow: none;
         background-color: transparent;
         .heading--4;
         font-size: 14px;

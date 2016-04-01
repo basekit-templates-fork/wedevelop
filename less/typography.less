@@ -242,60 +242,64 @@ a {
 
 	.content blockquote,
 	.post-body blockquote {
-	    quotes: "\201C""\201D""\2018""\2019";
 	    position: relative;
+	    quotes: "“" "”" "“" "”";
 	    width: 100%;
-	    padding: 50px 80px;
-	    margin-top: 0;
+	    padding: 40px 60px;
+	    margin: 0 auto;
 	    text-align: left;
-	    border-top: none;
-	    border-bottom: none;
-	    background-color: @color__header--background;
-	    color: #ffffff;
+	    border: 1px solid darken(@color__body--background,3%);
+	    background-color: @color__feature-content--background;
+	    .border-radius(3px);
+	    color: @color__h4--text;
 	    font-family: @font__p--font-family;
-	    font-size: @font__h4--font-size;
+	    font-size: @font__p--font-size;
 	    font-weight: @font__p--font-weight;
-	    line-height: @font__h4--line-height;
+	    line-height: @font__p--line-height;
 	    letter-spacing: @font__p--letter-spacing;
 	    p {
-	        color: #ffffff;
+	        color: @color__h4--text;
 	        font-family: @font__p--font-family;
-	        font-size: @font__h4--font-size;
+	        font-size: @font__p--font-size;
 	        font-weight: @font__p--font-weight;
-	        line-height: @font__h4--line-height;
+	        line-height: @font__p--line-height;
 	        letter-spacing: @font__p--letter-spacing;
+	        padding-bottom: 0;
 	    }
 	}
 
 	.content blockquote:before,
-	.content blockquote:after,
-	.post-body blockquote:before,
-	.post-body blockquote:after {
-	    color: @color-swatch1;
-	    top: 30px;
-	    left: 35px;
+	.post-body blockquote:before {
+	    position: absolute;
+	    color: @color-swatch4;
+	    font-size: 40px;
+	    left: 40px;
 	}
 
-	.columns-four-first,
-	.columns-four-second,
-	.columns-four-third,
-	.columns-four-fourth,
-	.columns-three-left,
-	.columns-three-right,
-	.columns-three-middle {
+	// Mobile
+	@media @mobile {
 	    .content blockquote,
 	    .post-body blockquote {
 	        padding: 30px 30px 30px 50px;
-	        @media only screen and (min-width: 478px) {
-	            padding-right: 30px !important;
-	        }
 	    }
 	    .content blockquote:before,
-	    .content blockquote:after,
-	    .post-body blockquote:before,
-	    .post-body blockquote:after {
-	        top: 15px;
-	        left: 23px;
+	    .post-body blockquote:before {
+	        left: 25px;
+	    }
+	}
+
+	// Four Columns
+	.columns-four-first,
+	.columns-four-second,
+	.columns-four-third,
+	.columns-four-fourth {
+	    .content blockquote,
+	    .post-body blockquote {
+	        padding: 30px 30px 30px 50px;
+	    }
+	    .content blockquote:before,
+	    .post-body blockquote:before {
+	        left: 25px;
 	    }
 	}
 
