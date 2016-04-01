@@ -97,9 +97,9 @@
         },
         "font8": {
             "font-family": "\"PT Sans\", Tahoma, Geneva, sans-serif",
-            "font-size": "70px",
+            "font-size": "48px",
             "font-weight": "400",
-            "line-height": "80px",
+            "line-height": "60px",
             "color": "@color-swatch1",
             "letter-spacing": "0px"
         },
