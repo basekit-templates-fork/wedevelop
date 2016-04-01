@@ -245,10 +245,9 @@ a {
 	    position: relative;
 	    quotes: "“" "”" "“" "”";
 	    width: 100%;
-	    padding: 40px 60px;
 	    margin: 0 auto;
 	    text-align: left;
-	    border: 1px solid darken(@color__body--background,3%);
+	    border: 1px solid darken(@color__feature-content--background,3%);
 	    background-color: @color__feature-content--background;
 	    .border-radius(3px);
 	    color: @color__h4--text;
@@ -257,19 +256,23 @@ a {
 	    font-weight: @font__p--font-weight;
 	    line-height: @font__p--line-height;
 	    letter-spacing: @font__p--letter-spacing;
-	    p {
+	    p, h1, h2, h3, h4 {
 	        color: @color__h4--text;
 	        font-family: @font__p--font-family;
 	        font-size: @font__p--font-size;
 	        font-weight: @font__p--font-weight;
 	        line-height: @font__p--line-height;
 	        letter-spacing: @font__p--letter-spacing;
-	        padding-bottom: 0;
+	        padding: 40px 60px;
+	        border: 1px solid darken(@color__feature-content--background,3%);
+	    	background-color: @color__feature-content--background;
 	    }
 	}
 
 	.content blockquote:before,
-	.post-body blockquote:before {
+	.post-body blockquote:before,
+	.content blockquote p:before,
+	.post-body blockquote p:before {
 	    position: absolute;
 	    color: @color-swatch4;
 	    font-size: 40px;
@@ -280,10 +283,14 @@ a {
 	@media @mobile {
 	    .content blockquote,
 	    .post-body blockquote {
-	        padding: 30px 30px 30px 50px;
+	    	p, h1, h2, h3, h4 {
+	        	padding: 30px 30px 30px 50px;
+	        }
 	    }
 	    .content blockquote:before,
-	    .post-body blockquote:before {
+	    .post-body blockquote:before,
+	    .content blockquote p:before,
+		.post-body blockquote p:before {
 	        left: 25px;
 	    }
 	}
@@ -295,10 +302,14 @@ a {
 	.columns-four-fourth {
 	    .content blockquote,
 	    .post-body blockquote {
-	        padding: 30px 30px 30px 50px;
+	    	p, h1, h2, h3, h4 {
+	        	padding: 30px 30px 30px 50px;
+	        }
 	    }
 	    .content blockquote:before,
-	    .post-body blockquote:before {
+	    .post-body blockquote:before,
+	    .content blockquote p:before,
+		.post-body blockquote p:before {
 	        left: 25px;
 	    }
 	}
