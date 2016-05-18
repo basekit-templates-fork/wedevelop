@@ -55,37 +55,36 @@
 // Content Wrap
 // ------------------------------
 
-.feature__content-wrap {
-    width: 100%;
-    z-index: 2;
-    display: table;
-
-    padding: 30px;
-    // overflow: auto;
-    background-color: fade(@color__feature-content--background, 60%);
-    overflow: hidden;
-
-}
-
-.feature,
-.feature__content-wrap {
+.feature .background-image,
+.feature .content-wrap {
     min-height: @value__feature--height--desktop;
+    height: @value__feature--height--desktop;
     @media only screen and (max-width: 1024px) {
         min-height: @value__feature--height--tablet;
+        height: @value__feature--height--tablet;
     }
     @media @mobile {
         min-height: @value__feature--height--mobile;
+        height: @value__feature--height--mobile;
     }
 }
 
+.feature .background-image {
+    display: table;
+    width: 100%;
+    background-size: cover;
+}
 
-.feature__content-inner-wrap {
+.feature .content-wrap {
     display: table-cell;
     z-index: 3;
     width: 100%;
     margin: 0 auto;
+    padding: 30px;
     vertical-align: middle;
     text-align: center;
+    background-color: fade(@color__feature-content--background, 60%);
+    overflow: hidden;
 
     @media @tablet {
         opacity: 1!important;
