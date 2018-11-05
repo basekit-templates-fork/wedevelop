@@ -63,11 +63,14 @@ a {
 	}
 }
 
-.content {
-	max-width: 760px;
-	margin: 0 auto;
 
-	@media @tablet {
+[data-name="content"] * {
+	margin: 0 auto;
+    max-width: 800px;
+    left: 0;
+    right: 0;
+
+    @media @tablet {
 		max-width: 100%;
 	}
 }
