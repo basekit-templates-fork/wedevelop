@@ -16,11 +16,38 @@
         padding: 0;
     }
     
-    
-    // Edit
-    &.edit {
+    .main-content [data-name="row"].widget {
+        margin-bottom: 0;
     }
-
+    
+    .page {
+        &--default,
+        &--blogpost {
+            .main-content {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+            .main-content .widget:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+    
+    .homepage-images [data-widget-type="image"]:first-child {
+        margin-left: -5px;
+        
+        @media @mobile {
+            margin-left: 0;
+        }
+    }
+    .homepage-images [data-widget-type="image"]:last-child {
+        margin-right: -5px;
+        
+        @media @mobile {
+            margin-right: 0;
+        }
+    }
+    
 
 
 
@@ -32,12 +59,15 @@
     .empty-zone,
     #page-zones__main:empty,
     #page-zones__main > .widget:not([data-name="row"]),
-    .row:not(.row--width-no-padding) .row__container {
+    .row:not(.row--width-no-padding) .row__container,
+    [data-widget-type="feature"],
+    .homepage-images {
         width: 90%;
         max-width: 1200px;
         margin-left: auto;
         margin-right: auto;
     }
+
     
     
     // Adds spacing to a section when a widget follows it
@@ -59,9 +89,6 @@
     #page-zones__main > .widget:not([data-name="row"]):first-child {
         margin-top: 20px;
     }
-    .page--default #page-zones__main > .widget:not([data-name="row"]):first-child {
-        margin-top: 0;
-    }
 
     
     // Move spacing to last widget in the main zone (not sections)
@@ -76,19 +103,9 @@
     }
     
     
-    // Remove spacing from first light section
-    .default-page,
-    .product-page {
-        #page-zones__main > .style--light:first-child .row--style-light .row__container {
-            padding-top: 0;
-            
-            @media @tablet {
-                padding-top: 4%;
-            }
-            @media @mobile {
-                // margin-top: 20px;
-            }
-        }
+    // Remove spacing from first light section on default page
+    .page--default #page-zones__main > .style--light:first-child .row--style-light .row__container {
+        padding-top: 0;
     }
     
     // Remove spacing from first light section
@@ -99,6 +116,9 @@
     
     // Widget styles
     [data-name="row"] {
+        .product-actions .select-wrap {
+            padding: 0;
+        }
     }
 
 }
