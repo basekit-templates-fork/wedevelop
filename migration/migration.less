@@ -10,6 +10,15 @@
     // -----------------------------
 
 
+    &.row-editing,
+    &.is-move-mode {
+
+        .template-header {
+            display: none;
+            visibility: hidden;
+        }
+    }
+
     .main-content {
         width: 100%;
         max-width: 100%;
@@ -18,6 +27,10 @@
     
     .main-content [data-name="row"].widget {
         margin-bottom: 0;
+
+        + .widget {
+            margin-bottom: 12px;
+        }
     }
     
     .page {
